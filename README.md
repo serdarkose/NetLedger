@@ -1,16 +1,13 @@
 # NetLedger
-
 A lightweight network logger for Linux systems - including both Desktop and embedded environments - that captures and
 records all network connections and DNS lookups with hash-chained logs.
 
 ## Features
-
 - Real-time network connection monitoring
 - DNS lookup logging
 - Hash-chained log integrity
 
 ## Prerequisites
-
 - Linux system (Desktop or embedded)
 - GCC/Clang compiler with C++17 support
 - Root privileges for network monitoring
@@ -22,7 +19,29 @@ TBD
 TBD
 
 ### Building from Source
-TBD
+To build, test, or clean NetLedger from source, use the provided build script with the following options:
+
+```bash
+script/build.sh build    # Configure and compile the project
+script/build.sh test     # Run unit tests
+script/build.sh clean    # Remove build artifacts
+script/build.sh depends  # Install required dependencies (requires sudo)
+```
+
+This script will use your system's default C++ compiler. The resulting binaries will be placed in the `build/` directory.
+
+For details, please see `script/build.sh`
+
+**Requirements:**
+- Linux system (Desktop or embedded)
+- GCC or Clang with C++17 support
+- `cmake` and `make` installed
+- Root privileges for network monitoring
+- Internet access for installing dependencies (`depends` option)
+
+**Requirements:**
+- Ensure all prerequisites are installed (see above).
+- Run the script from the project root directory.
 
 ### System Installation
 TBD
@@ -50,6 +69,9 @@ TBD
 3. Commit your changes (`git commit -m 'Add some amazing feature'`)
 4. Push to the branch (`git push origin feature/amazing-feature`)
 5. Open a Pull Request
+
+## C++ version
+C++17 is taken as base considering wider compatibility, especially on the embedded platforms
 
 ## Coding Guide
 
